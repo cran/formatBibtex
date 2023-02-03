@@ -1,0 +1,13 @@
+8e148c44aefe43bc70c34bf7e1de7f6b *DESCRIPTION
+01c67f9c965f36a624ce88fd3754a439 *NAMESPACE
+59dea70df5a7b8542330d54ec4d48a1d *R/bibtex.R
+3ce174e0ee8054a2d9bb5365e6c76a8c *R/format_string.R
+cf670a368d414bd381488d0cf92765a1 *R/misc.R
+01e94c584e3b51bd4b0650f0370ffa94 *R/zzz.R
+fdbd409d3a605060ea8ab622ca73e9b5 *README.md
+a215dd138a3e00be120cbc37625de8a4 *inst/CITATION
+cef71a54137ebfe00b90cc970621f98e *inst/examples/ex-bibtex.R
+da01bbdb5189c0f61c7a38a822ca91c8 *inst/examples/ex-format_string.R
+ee509ec2b8261b756330affcb2eab570 *inst/examples/example.bib
+7c6133b4b23af6dfb20e6719697937bf *man/format_bibtex_entry.Rd
+a275b63ab3debfb932a646a2d756ed4f *man/format_string.Rd

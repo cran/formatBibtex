@@ -1,0 +1,9 @@
+bibentry(
+    key = "formatBibtex-package",
+    bibtype = "Manual",
+    title = "{formatBibtex}: {F}ormat {BibTeX} Entries",
+    author = as.person("Wenjie Wang"),
+    year = "2023",
+    url = "https://CRAN.R-project.org/package=formatBibtex",
+    note = "R package version 0.1.0"
+)
