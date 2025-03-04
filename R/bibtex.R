@@ -1,6 +1,6 @@
 ##
 ## formatBibtex: Format BibTeX Entries
-## Copyright (C) 2021-2023 Wenjie Wang <wang@wwenjie.org>
+## Copyright (C) 2021-2025 Wenjie Wang <wang@wwenjie.org>
 ##
 ## This file is part of the R package formatBibtex.
 ##
@@ -62,7 +62,7 @@
 ##'     the disk.  The default value is \code{FALSE}.
 ##' @param ... Other arguments passed to \code{format_bibtex_entry}.
 ##'
-##' @return A \code{bibentry} object.
+##' @return A \code{bibtex} object.
 ##'
 ##' @example inst/examples/ex-bibtex.R
 ##'
@@ -75,7 +75,7 @@ NULL
 format_bibtex_entry <-
     function(entry,
              fields = c("title", "author", "journal", "pages"),
-             protected_words = getOption("formatBibtex.protected_words"),
+             protected_words = NULL,
              ...)
 {
     if (! inherits(entry, "bibentry")) {
@@ -92,9 +92,7 @@ format_bibtex_entry <-
         x
     }
     list_has <- function(x, name) {
-        if (is.null(x[[name]]))
-            FALSE
-        TRUE
+        ! is.null(x[[name]])
     }
     bib_list <- unclass(entry)
     res_list <- lapply(seq_along(bib_list), function(i) {
@@ -123,7 +121,7 @@ format_bibtex_entry <-
             )
         }
         if (list_has(xi, "pages") && "pages" %in% fields) {
-            xi$pages <- gsub("-+", "--", xi$pages)
+            xi$pages <- gsub("[ ]*-+[ ]*", "--", xi$pages)
         }
         do.call(utils::bibentry, xi)
     })
